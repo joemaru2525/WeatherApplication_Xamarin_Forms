@@ -11,6 +11,7 @@
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout>
+        <Picker x:Name = "picker" Title = "地域選択" SelectedIndexChanged = "OnSelectedIndexChanged" />
         <Label x:Name="labelTitle" Text="タイトル" FontAttributes = "Bold" FontSize = "18" />
         <Label x:Name="labelAnnounce" Text="発表日時" />
         <Label x:Name="labelDate" Text="日付け" />
