@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:YahooWeather_Forms" 
-    x:Class="YahooWeather_Forms.YahooWeather_FormsPage">
+    x:Class="YahooWeather_Forms.YahooWeather_FormsPage" >
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -39,7 +40,8 @@
             <Label x:Name="labelPrecip03" Text="---" WidthRequest="70" />
             <Label x:Name="labelPrecip04" Text="---" WidthRequest="70" />
         </StackLayout>
-        
+
+        <Button x:Name="btn1" Text="Powered by Yahoo! Japan Weather" />
         
     </StackLayout>
 	

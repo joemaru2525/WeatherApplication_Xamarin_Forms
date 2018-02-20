@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="WebBrowserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="icons\win\view-WebView-16.png" />

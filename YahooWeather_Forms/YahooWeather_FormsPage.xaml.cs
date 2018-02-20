@@ -4,6 +4,7 @@ using HtmlAgilityPack;
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace YahooWeather_Forms
 {
     public partial class YahooWeather_FormsPage : ContentPage
@@ -167,6 +168,7 @@ namespace YahooWeather_Forms
         public YahooWeather_FormsPage()
         {
             InitializeComponent();
+            this.btn1.Clicked += Btn1_Clicked;
 
             yahooWeather("https://weather.yahoo.co.jp/weather/jp/13/4410.html");
 
@@ -242,7 +244,18 @@ namespace YahooWeather_Forms
             HtmlNodeCollection node7 = doc.DocumentNode.SelectNodes("//div[@class='forecastCity']//p[@class='pict']//img");
             var imageURL = node7[0].GetAttributeValue("src", "");
             imageWeather.Source = imageURL;
+        }
 
+        private void Btn1_Clicked(object sender, EventArgs e)
+        {
+            //this.btn1.Text = "クリックした";
+            var uri = "https://weather.yahoo.co.jp/weather/";
+            DependencyService.Get<IWebBrowserService>().Open(new Uri(uri)); // open in WebBrowser
+        }
+
+        public interface IWebBrowserService
+        {
+            void Open(Uri uri);
         }
 
     }
