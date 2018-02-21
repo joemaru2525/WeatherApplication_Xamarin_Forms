@@ -3,7 +3,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:YahooWeather_Forms" 
-    x:Class="YahooWeather_Forms.YahooWeather_FormsPage" >
+    x:Class="YahooWeather_Forms.YahooWeather_FormsPage"
+    BackgroundImage="wallpaper4.jpg" >
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -11,6 +12,7 @@
             <On Platform="Android" Value="20" />
         </OnPlatform>
     </ContentPage.Padding>
+
     <StackLayout>
         <Picker x:Name = "picker" Title = "地域選択" SelectedIndexChanged = "OnSelectedIndexChanged" />
         <Label x:Name="labelTitle" Text="タイトル" FontAttributes = "Bold" FontSize = "18" />

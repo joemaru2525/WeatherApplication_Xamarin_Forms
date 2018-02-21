@@ -131,6 +131,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\wallpaper1.jpg" />
+    <AndroidResource Include="Resources\drawable\wallpaper2.jpg" />
+    <AndroidResource Include="Resources\drawable\wallpaper3.jpg" />
+    <AndroidResource Include="Resources\drawable\wallpaper4.jpg" />
   </ItemGroup>
   <Import Project="..\YahooWeather_Forms\YahooWeather_Forms.projitems" Label="Shared" Condition="Exists('..\YahooWeather_Forms\YahooWeather_Forms.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

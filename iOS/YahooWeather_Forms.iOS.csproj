@@ -400,6 +400,10 @@
     <BundleResource Include="icons\mac\cell-EntryCell-16~dark.png" />
     <BundleResource Include="icons\mac\cell-EntryCell-16%402x.png" />
     <BundleResource Include="icons\mac\cell-EntryCell-16.png" />
+    <BundleResource Include="Resources\wallpaper1.jpg" />
+    <BundleResource Include="Resources\wallpaper2.jpg" />
+    <BundleResource Include="Resources\wallpaper3.jpg" />
+    <BundleResource Include="Resources\wallpaper4.jpg" />
   </ItemGroup>
   <Import Project="..\YahooWeather_Forms\YahooWeather_Forms.projitems" Label="Shared" Condition="Exists('..\YahooWeather_Forms\YahooWeather_Forms.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
