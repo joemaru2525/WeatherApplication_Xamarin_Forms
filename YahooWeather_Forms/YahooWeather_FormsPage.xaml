@@ -3,48 +3,53 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:YahooWeather_Forms" 
-    x:Class="YahooWeather_Forms.YahooWeather_FormsPage"
-    BackgroundImage="wallpaper4.jpg" >
+    x:Class="YahooWeather_Forms.YahooWeather_FormsPage" >
+    
 
+        
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="20, 40, 20, 20" />
-            <On Platform="Android" Value="20" />
+            <On Platform="iOS" Value="10, 40, 10, 10" />
+            <On Platform="Android" Value="10" />
         </OnPlatform>
     </ContentPage.Padding>
 
-    <StackLayout>
-        <Picker x:Name = "picker" Title = "地域選択" SelectedIndexChanged = "OnSelectedIndexChanged" />
-        <Label x:Name="labelTitle" Text="タイトル" FontAttributes = "Bold" FontSize = "18" />
-        <Label x:Name="labelAnnounce" Text="発表日時" />
-        <Label x:Name="labelDate" Text="日付け" />
-        <Label x:Name="labelWeather" Text="天候" FontAttributes = "Bold" />
-        
-        <StackLayout Orientation="Horizontal">
-            <Image  x:Name="imageWeather" Source = "" HeightRequest="100" WidthRequest="100" />
+    <Grid>
+        <Image Source="wallpaper4.jpg" Aspect="AspectFill" />
+
+        <StackLayout>
+            <Picker x:Name = "picker" Title = "地域選択" SelectedIndexChanged = "OnSelectedIndexChanged" />
+            <Label x:Name="labelTitle" Text="タイトル" FontAttributes = "Bold" FontSize = "18" />
+            <Label x:Name="labelAnnounce" Text="発表日時" />
+            <Label x:Name="labelDate" Text="日付け" />
+            <Label x:Name="labelWeather" Text="天候" FontAttributes = "Bold" />
+            
+            <StackLayout Orientation="Horizontal">
+                <Image  x:Name="imageWeather" Source = "" HeightRequest="100" WidthRequest="100" />
+            </StackLayout>
+
+            <Label x:Name="labelTempHigh" Text="最高気温" />
+            <Label x:Name="labelTempLow" Text="最低気温" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="時間帯：" WidthRequest="80" />
+                <Label Text="0-6" WidthRequest="70" />
+                <Label Text="6-12" WidthRequest="70" />
+                <Label Text="12-18" WidthRequest="70" />
+                <Label Text="18-24" WidthRequest="70" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="降水％：" WidthRequest="80" />
+                <Label x:Name="labelPrecip01" Text="---" WidthRequest="70" />
+                <Label x:Name="labelPrecip02" Text="---" WidthRequest="70" />
+                <Label x:Name="labelPrecip03" Text="---" WidthRequest="70" />
+                <Label x:Name="labelPrecip04" Text="---" WidthRequest="70" />
+            </StackLayout>
+
+            <Button x:Name="btn1" Text="Powered by Yahoo! Japan Weather" />
+            
         </StackLayout>
-
-        <Label x:Name="labelTempHigh" Text="最高気温" />
-        <Label x:Name="labelTempLow" Text="最低気温" />
-
-        <StackLayout Orientation="Horizontal">
-            <Label Text="時間帯：" WidthRequest="80" />
-            <Label Text="0-6" WidthRequest="70" />
-            <Label Text="6-12" WidthRequest="70" />
-            <Label Text="12-18" WidthRequest="70" />
-            <Label Text="18-24" WidthRequest="70" />
-        </StackLayout>
-
-        <StackLayout Orientation="Horizontal">
-            <Label Text="降水％：" WidthRequest="80" />
-            <Label x:Name="labelPrecip01" Text="---" WidthRequest="70" />
-            <Label x:Name="labelPrecip02" Text="---" WidthRequest="70" />
-            <Label x:Name="labelPrecip03" Text="---" WidthRequest="70" />
-            <Label x:Name="labelPrecip04" Text="---" WidthRequest="70" />
-        </StackLayout>
-
-        <Button x:Name="btn1" Text="Powered by Yahoo! Japan Weather" />
-        
-    </StackLayout>
+    </Grid>    
 	
 </ContentPage>
