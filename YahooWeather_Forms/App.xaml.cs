@@ -8,7 +8,8 @@ namespace YahooWeather_Forms
         {
             InitializeComponent();
 
-            MainPage = new YahooWeather_FormsPage();
+            //MainPage = new YahooWeather_FormsPage();
+            MainPage = new NavigationPage(new YahooWeather_FormsPage());
         }
 
         protected override void OnStart()

@@ -280,6 +280,11 @@ namespace YahooWeather_Forms
             imageWeather.Source = imageURL;
         }
 
+        private async void OnTransitNextPage(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new settingPage(), true);
+        }
+
         private void Btn1_Clicked(object sender, EventArgs e)
         {
             //this.btn1.Text = "クリックした";

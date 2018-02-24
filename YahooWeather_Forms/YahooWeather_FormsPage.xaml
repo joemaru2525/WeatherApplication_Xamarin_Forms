@@ -46,9 +46,13 @@
                 <Label x:Name="labelPrecip04" Text="---" WidthRequest="70" />
             </StackLayout>
 
+            <Button x:Name="btn0" Text="設定ページ" Clicked="OnTransitNextPage" />
+            <Label Text="" />
+            <Label Text="" />
             <Button x:Name="btn1" Text="Powered by Yahoo! Japan Weather" />
             
         </StackLayout>
+        
     </Grid>    
 	
 </ContentPage>
