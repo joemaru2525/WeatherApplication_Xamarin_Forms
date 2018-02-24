@@ -9,7 +9,6 @@ namespace YahooWeather_Forms
 {
     public partial class YahooWeather_FormsPage : ContentPage
     {
-
         //Pickerに表示する項目の作成
         Dictionary<string, string> locationDic = new Dictionary<string, string>
             {
@@ -165,9 +164,44 @@ namespace YahooWeather_Forms
             yahooWeather(selectedURL);
         }
 
+        int timerCount = 0;
+
         public YahooWeather_FormsPage()
         {
             InitializeComponent();
+
+            //BackgroundImage="wallpaper5.jpg";
+            //imageBackground.Source = "wallpaper5.jpg";
+
+            int timerInterval = 1;  //10seconds
+
+            Device.StartTimer(TimeSpan.FromSeconds(10), () =>
+            {
+                // タイマー処理
+                timerCount = timerCount + 1;
+                System.Diagnostics.Debug.WriteLine(timerCount);
+
+                if (timerCount >= timerInterval * 3)
+                {
+                    timerCount = 0;
+                    System.Diagnostics.Debug.WriteLine("Clear");
+                    imageBackground.Source = "wallpaper5.jpg";
+                    System.Diagnostics.Debug.WriteLine("image5");
+                }
+                else if (timerCount >= timerInterval * 2)
+                {
+                    imageBackground.Source = "wallpaper4.jpg";
+                    System.Diagnostics.Debug.WriteLine("image4");
+                }  
+                else 
+                {
+                    imageBackground.Source = "wallpaper3.jpg";
+                    System.Diagnostics.Debug.WriteLine("image3");
+                } 
+
+                return true;
+            });
+
             this.btn1.Clicked += Btn1_Clicked;
 
             yahooWeather("https://weather.yahoo.co.jp/weather/jp/13/4410.html");
@@ -199,32 +233,32 @@ namespace YahooWeather_Forms
             //タイトル
             HtmlNodeCollection node0 =
             doc.DocumentNode.SelectNodes("//title");
-            labelTitle.Text = node0[0].InnerText;
+            labelTitle.Text = " " + node0[0].InnerText;
 
             //Anounce Date & Time（発表日時）
             HtmlNodeCollection node1 =
             doc.DocumentNode.SelectNodes("//div[@class='yjw_title_h2 yjw_clr']//p[@class='yjSt yjw_note_h2']");
-            labelAnnounce.Text = node1[0].InnerText;
+            labelAnnounce.Text = " " + node1[0].InnerText;
 
             //WeatherDate（対象日）
             HtmlNodeCollection node2 =
             doc.DocumentNode.SelectNodes("//div[@class='forecastCity']//p[@class='date']");
-            labelDate.Text = node2[0].InnerText;
+            labelDate.Text = " " + node2[0].InnerText;
 
             //Weather（天候）
             HtmlNodeCollection node3 =
             doc.DocumentNode.SelectNodes("//div[@class='forecastCity']//p[@class='pict']");
-            labelWeather.Text = node3[0].InnerText;
+            labelWeather.Text = " " + node3[0].InnerText;
 
             //High Temp（最高気温）
             HtmlNodeCollection node4 =
             doc.DocumentNode.SelectNodes("//div[@class='forecastCity']//ul[@class='temp']//li[@class='high']");
-            labelTempHigh.Text = "最高気温 [前日差]： " + node4[0].InnerText;
+            labelTempHigh.Text = " 最高気温 [前日差]： " + node4[0].InnerText;
 
             //Low Temp（最低気温）
             HtmlNodeCollection node5 =
             doc.DocumentNode.SelectNodes("//div[@class='forecastCity']//ul[@class='temp']//li[@class='low']");
-            labelTempLow.Text = "最低気温 [前日差]： " + node5[0].InnerText;
+            labelTempLow.Text = " 最低気温 [前日差]： " + node5[0].InnerText;
 
             //Precip1[0-6]（降水確率）
             HtmlNodeCollection node6 =

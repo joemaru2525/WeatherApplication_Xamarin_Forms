@@ -135,6 +135,7 @@
     <AndroidResource Include="Resources\drawable\wallpaper2.jpg" />
     <AndroidResource Include="Resources\drawable\wallpaper3.jpg" />
     <AndroidResource Include="Resources\drawable\wallpaper4.jpg" />
+    <AndroidResource Include="Resources\drawable\wallpaper5.jpg" />
   </ItemGroup>
   <Import Project="..\YahooWeather_Forms\YahooWeather_Forms.projitems" Label="Shared" Condition="Exists('..\YahooWeather_Forms\YahooWeather_Forms.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

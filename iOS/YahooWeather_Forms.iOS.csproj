@@ -404,6 +404,7 @@
     <BundleResource Include="Resources\wallpaper2.jpg" />
     <BundleResource Include="Resources\wallpaper3.jpg" />
     <BundleResource Include="Resources\wallpaper4.jpg" />
+    <BundleResource Include="Resources\wallpaper5.jpg" />
   </ItemGroup>
   <Import Project="..\YahooWeather_Forms\YahooWeather_Forms.projitems" Label="Shared" Condition="Exists('..\YahooWeather_Forms\YahooWeather_Forms.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
